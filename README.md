@@ -14,21 +14,22 @@ Employee churn, or turnover, is a critical metric for organizations aiming to re
   ```
   Data Cleaning: Handle missing values, outliers, and inconsistencies.
   Exploratory Data Analysis (EDA) for uncovering patterns and trends.
-  Feature Engineering: Create relevant features for model training.
+  Feature Engineering: Create relevant features for model training.Feature importance analysis is performed to identify the most influential features in predicting churn.
+  A feature importance table is stored in a BigQuery table 
+![image](https://github.com/user-attachments/assets/da481679-5817-4da3-b54f-e3901174c2ed)
 
 3. Model Development:
-  Data Splitting: Divide the data into training and testing sets.
-  Model Selection: Choose a suitable machine learning algorithm (e.g., Random Forest, XGBoost).
-  Model Training: Train the model on the training data.
-  Model Evaluation: Evaluate the model's performance using metrics like accuracy, precision, recall, and F1-score.
+  Data Splitting: Divide the data into training and testing sets. Employee churn data is sourced from a BigQuery table
+  Model Training: Train the model on the training data. PyCaret is used for model training and evaluation.
+  Model Evaluation: Evaluate the model's performance using metrics like accuracy, precision, recall, and F1-score.A Random Forest model is selected as the best performing model based on comparison with other models.
   Model Tuning: Fine-tune hyperparameters to improve model performance.
 
-4. Model Deployment and Prediction:
+5. Model Deployment and Prediction:
   Deploy Model: Deploy the trained model to a cloud-based environment.
   Prediction: Use the deployed model to predict the likelihood of attrition for new employees.
   Result Analysis: Analyze the predicted probabilities and identify employees at risk of attrition.
 
-5. Dashboard Creation:
+6. Dashboard Creation:
   Data Visualization: Create a dashboard in Looker Studio to visualize key insights.
   Dashboard Components:
   KPI: Overall attrition rate
@@ -38,7 +39,7 @@ Employee churn, or turnover, is a critical metric for organizations aiming to re
   Filters: Allow users to filter data by department, tenure, or other relevant factors.
 
 
-6. Insights and Recommendations:
+7. Insights and Recommendations:
   Identify Risk Factors: Determine the key factors contributing to employee attrition.
   Propose Interventions: Recommend strategies to mitigate attrition, such as targeted training, improved compensation, or enhanced work-life balance.
   Monitor Performance: Continuously monitor the model's performance and retrain as needed.
